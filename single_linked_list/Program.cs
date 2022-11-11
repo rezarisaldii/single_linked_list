@@ -45,6 +45,22 @@ namespace single_linked_list
                 START = newnode;
                 return;
             }
+
+            //locate the position of the new noode in the list
+            Node previous, current;
+            previous = START;
+            current = START;
+
+            while((current != null) && (nim >= current.rollNumber))
+            {
+                if (nim == current.rollNumber)
+                {
+                    Console.WriteLine("\nDuplicate roll numbers no allowed\n");
+                    return;
+                }
+                previous = current;
+                current = current.next;
+            }
         }
     }
     internal class Program
