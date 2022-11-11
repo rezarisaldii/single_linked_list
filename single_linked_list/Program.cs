@@ -190,6 +190,8 @@ namespace single_linked_list
                                 }
                             }
                             break;
+                        case '5':
+                            return;
                         default:
                             {
                                 Console.WriteLine("\nInvalid option");
