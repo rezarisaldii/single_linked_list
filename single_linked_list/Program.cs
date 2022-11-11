@@ -149,7 +149,26 @@ namespace single_linked_list
                             }
                             break;
                         case '2':
-                            return;
+                            {
+                                if (obj.listEmpty())
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break;
+                                }
+                                Console.Write("\nEnter the roll number of" + " the student whose record is to be deleted :");
+                                int nim = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.delNode(nim) == false)
+                                    Console.WriteLine("\n Reccord not found.");
+                                else
+                                    Console.WriteLine("Record with roll number " + nim + "Deleted");
+                            }
+                            break;
+                        case '3':
+                            {
+                                obj.traverse();
+                            }
+                            break;
                         default:
                             {
                                 Console.WriteLine("\nInvalid option");
