@@ -13,6 +13,15 @@ namespace single_linked_list
         public string name;
         public Node next;
     }
+    class List
+    {
+        Node START;
+
+        public List()
+        {
+            START = null;
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
