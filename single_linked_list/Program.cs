@@ -121,10 +121,25 @@ namespace single_linked_list
                 return false;
         }
     }
-    internal class Program
+    class Program
     {
+
+        //check wheter the specified node is present in the list or not
+
         static void Main(string[] args)
         {
+            List obj = new List();
+            while (true)
+            {
+                try
+                {
+
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("\nCheck for the value entered");
+                }
+            }
         }
     }
 }
