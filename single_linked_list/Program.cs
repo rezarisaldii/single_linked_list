@@ -34,7 +34,7 @@ namespace single_linked_list
             newnode.name = nm;
 
             //if the node to be inserted is the first node
-            if (START != null || nim <= START.rollNumber)
+            if (START == null || nim <= START.rollNumber)
             {
                 if((START != null ) && (nim == START.rollNumber))
                 {
