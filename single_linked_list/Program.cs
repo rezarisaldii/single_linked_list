@@ -141,6 +141,22 @@ namespace single_linked_list
                     Console.WriteLine("5. EXIT");
                     Console.WriteLine("\nEnter your voice (1-5) : ");
                     char ch = Convert.ToChar(Console.ReadLine());
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                obj.addNote();
+                            }
+                            break;
+                        case '2':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("\nInvalid option");
+                                break;
+                            }
+                    }
+
 
 
                 }
