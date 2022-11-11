@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,6 +67,58 @@ namespace single_linked_list
              manner that the position for the new node */
             newnode.next = current;
             previous.next = newnode;
+        }
+        public void traverse()
+        {
+            if (listEmpty())
+            {
+                Console.WriteLine("\nList is empty.\n");
+            }
+            else
+            {
+                Console.WriteLine("\nnThe records in the list are : ");
+                Node currentNode;
+                for (currentNode = START; currentNode != null;
+                    currentNode = currentNode.next)
+
+                    Console.WriteLine(currentNode.rollNumber + " " + currentNode.name + " \n");
+
+                Console.WriteLine();
+            }
+        }
+        public bool delNode(int nim)
+        {
+            Node previous, current;
+            previous= current = null;
+            //check if the spesified node is present in the list or not
+            if (Search(nim, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if (current == START)
+                START = START.next;
+            return true;
+        }
+        public bool Search(int nim, ref Node previous, ref Node current)
+        {
+            previous = START;
+            current = START;
+
+            while ((current != null) && (nim != current.rollNumber))
+            {
+                previous = current;
+                current = current.next;
+            }
+            if (current == null)
+                return (false);
+            else
+                return (true);
+        }
+        public bool listEmpty()
+        {
+            if (START == null)
+                return true;
+            else
+                return false;
         }
     }
     internal class Program
